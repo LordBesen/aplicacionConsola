@@ -51,7 +51,21 @@ const preguntas = [
 
 }]
 
+const pausas = [{
+    type:'input',
+    name:'pause',
+    message: 'Presione ENTER para continuar',
+    choices: [
+        {
 
+            value:'',
+            name: ''
+        },
+
+
+]
+
+}]
 
 
 
@@ -77,10 +91,24 @@ const inquirerMenu = async () => {
 
 }
 
+const pausa = async() => {
+
+    const question = [
+
+        {
+            type: 'input',
+            name:'enter',
+            message: ` presione ENTER para continuar`
+        }
+    ]
+        await inquirer.prompt(question);
+    
+}
 
 module.exports = {
 
-    inquirerMenu
+    inquirerMenu,
+    pausa
 }
 
 
